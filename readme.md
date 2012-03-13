@@ -2,6 +2,8 @@
 
 Elephactory is an elegant JavaScript library to create DOM Nodes in a way that looks like markup, but without messy HTML-in-strings.
 
+Please note that Elephactory is currently in **alpha**, and is not ready for production use (or even to build, for that matter)!
+
 ## Usage
 ### Node.js/CommonJS
 	var E = require('elephactory').for(document);
