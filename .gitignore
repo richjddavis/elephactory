@@ -1,0 +1,9 @@
+# Sublime Text Project Files
+*.sublime-project
+*.sublime-workspace
+
+# OS Files
+.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db
