@@ -1,16 +1,16 @@
 # Elephactory
 
-Elephactory is an elegant JavaScript library to create DOM Nodes in a way that looks like markup, but without messy HTML-in-strings.
+Elephactory is a simple and expressive JavaScript library to create DOM Nodes in a way that looks like markup, but without messy HTML-in-strings.
 
 Please note that Elephactory is currently in **alpha**, and is not ready for production use (or even to build, for that matter)!
 
 ## Usage
 ### Node.js/CommonJS
-	var E = require('elephactory').for(document);
+	// Use .create() to get a fresh instance every time, or .get() to get a memoised instance
+	var E = require('elephactory').get(document);
 
-	document.body.appendChild(E.fragment(
-		E.header({id:'header'}
-		),
+	document.body.appendChild(E._fragment(
+		E.header({id:'header'}),
 		E.div({class:'content', onclick:function({alert('watch it!');})},
 			'ohai, there!'
 		)
@@ -20,9 +20,8 @@ Please note that Elephactory is currently in **alpha**, and is not ready for pro
 	<script src='elephactory.js'></script>
 	<script>
 	document.addEventListener('DOMContentLoaded', function () {
-		document.body.appendChild(E.fragment(
-			E.header({id:'header'}
-			),
+		document.body.appendChild(E._fragment(
+			E.header({id:'header'}),
 			E.div({class:'content', onclick:function({alert('watch it!');})},
 				'ohai, there!'
 			)
